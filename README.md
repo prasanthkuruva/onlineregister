@@ -1,1 +1,1 @@
-this is the student registration file
+this is the student registration and login site.
