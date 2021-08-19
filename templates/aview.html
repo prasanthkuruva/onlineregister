@@ -1,0 +1,38 @@
+{% extends 'common.html' %}
+{% block common %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'ahome' %}">Home</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'aview' %}">View All Students Profiles</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{%  url 'adelete' %}">Delete Student Profile</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'index' %}">Logout</a>
+  </div>
+</nav>
+    <hr>
+    <table style="background: gold" border="2" align="center">
+    <tr><th style="text-align: center" colspan="10"><h4>All Students Information</h4></th> </tr>
+    <tr>
+        <th>Student Name</th>
+        <th>Age</th>
+        <th>Contact Number</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>User Name</th>
+    </tr>
+    {% for x in data %}
+        <tr><th>{{ x.name }}</th>
+        <th>{{ x.age }}</th>
+        <th>{{ x.contact_no }}</th>
+        <th>{{ x.gender }}</th>
+        <th>{{ x.email }}</th>
+        <th>{{ x.username }}</th>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

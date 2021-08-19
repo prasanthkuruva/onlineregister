@@ -1,0 +1,23 @@
+{% extends 'common.html' %}
+{% block common %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'index' %}">Home</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'slogin' %}">Student Login</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'registration' %}">Register</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'forgot' %}">Forgot Password</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'alog' %}">Admin Login</a>
+  </div>
+</nav>
+    <hr>
+    {% block menu %}
+        {% endblock %}
+{% endblock %}

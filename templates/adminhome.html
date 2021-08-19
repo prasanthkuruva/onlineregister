@@ -1,0 +1,19 @@
+{% extends 'common.html' %}
+{% block common %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'ahome' %}">Home</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'aview' %}">View All Students Profiles</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{%  url 'adelete' %}">Delete Student Profile</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'index' %}">Logout</a>
+  </div>
+</nav>
+    <hr>
+    <h2>Welcome To Admin Page</h2>
+{% endblock %}

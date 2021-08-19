@@ -1,0 +1,23 @@
+h1{
+    background: wheat;
+    text-decoration-color: yellowgreen;
+    font-style: italic;
+    text-align: center;
+    font-size: 60px;
+    font-family: "DejaVu Sans";
+    background-color: yellow;
+}
+body{
+    background: papayawhip;
+}
+nav{
+    background-color: yellowgreen;
+    font-family: "Courier New";
+    text-underline-color: #87ff65;
+}
+h2{
+    font: 40px;
+    background-color: azure;
+    height: 60px;
+    text-align: center;
+}

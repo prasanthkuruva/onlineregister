@@ -1,0 +1,40 @@
+
+{% extends 'common.html' %}
+{% load static %}
+{% block common %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'shome' %}?un={{ name }}">Home</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'sprofile' %}?un={{ name }}">View Profile</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'uprofile' %}?un={{ name }}">Update Profile</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'index' %}">Logout</a>
+  </div>
+</nav>
+    <hr>
+    <form action="{% url 'updation' %}" method="post">
+    {% csrf_token %}
+
+    <h1>{{ name }} Update Your Profile Here</h1>
+    <table align="center" style="background: orange;height: 360px" width="560">
+    <tr><th rowspan="8"><img src="{% static 'images/update.png' %}"></th></tr>
+    <tr><th><input type="text" value="{{ data.name }}" name="t1"></th></tr>
+    <tr><th><input type="number" value="{{ data.age }}" name="t2"></th></tr>
+    <tr><th><input type="tel" value="{{ data.contact_no }}" name="t3"></th></tr>
+    <tr><th><input type="radio" value="{{ data.gender }}" name="t4" checked>Male
+            <input type="radio" value="{{ data.gender }}" name="t4">Female
+            <input type="radio" value="{{ data.gender }}" name="t4">Others</th></tr>
+    <tr><th><input type="email" value="{{ data.email }}" name="t5"></th></tr>
+    <tr><th><input type="hidden" value="{{ data.username }}" name="t6"></th></tr>
+    <tr><th><button type="submit">Update</button> </th></tr>
+    </table>
+    </form>
+    {% if a %}
+        <h4>{{ a }}</h4>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "menu.html" %}
+{% load static %}
+{% block menu %}
+
+    <h2 xmlns="http://www.w3.org/1999/html">Welcome To Django Learners</h2>
+    <hr>
+    <table align="center" style="background: darkorange">
+    <tr><Th style="text-align: center" colspan="3"><h3 style="text-align: center">Our Specialities</h3> </Th></tr>
+    <tr><th style="text-align: center" rowspan="10"><img src="{% static 'images/we.png' %}" width="400" height="480"></th>
+      <tr>  <th> <h3>Learn from industry experts</h3>
+Our real-time professionals helps you to learn any new technology in ease manner.
+    </th></tr><tr>
+        <th> <h3>Flexible Timings</h3>
+        Learn anytime from anywhere. Utilize your free time to learn new technology with our experts.</th></tr>
+    <tr><th><h3>10K+ students to believe</h3>
+95% positive feedback. Have a look of our participant’s video reviews and it says all.</th></tr>
+    <tr><th><h3>24/7 Support</h3>
+No matter what your current issue is, we have team ready to help immediately.</th></tr>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'common.html' %}
+{% block common %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'shome' %}?un={{ name }}">Home</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'sprofile' %}?un={{ name }}">View Profile</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'uprofile' %}?un={{ name }}">Update Profile</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'index' %}">Logout</a>
+  </div>
+</nav>
+    <hr>
+    <h1>{{ name }} See Your Profile Here</h1>
+    <table align="center" style="background: darkturquoise" border="1" width="480">
+    <tr><th>Name</th><th>{{ data.name }}</th></tr>
+    <tr><th>Age</th><th>{{ data.age }}</th></tr>
+    <tr><th>Contact No</th><th>{{ data.contact_no }}</th></tr>
+    <tr><th>Gender</th><th>{{ data.gender }}</th></tr>
+    <tr><th>Email Id</th><th>{{ data.email }}</th></tr>
+    <tr><th>Username</th><th>{{ data.username }}</th></tr>
+    <tr><th style="text-align: center" colspan="3">Want to <a href="{% url 'uprofile' %}?un={{ name }}"> UPDATE</a> click here</th></tr>
+    </table>
+{% endblock %}

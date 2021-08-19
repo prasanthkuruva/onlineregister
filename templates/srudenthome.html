@@ -1,0 +1,130 @@
+{% extends 'common.html' %}
+{% block common %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'shome' %}?un={{ name }}">Home</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'sprofile' %}?un={{ name }}">View Profile</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'uprofile' %}?un={{ name }}">Update Profile</a>
+  </div>
+      <div class="container">
+    <a class="navbar-brand" href="{% url 'index' %}">Logout</a>
+  </div>
+</nav>
+    <hr>
+    <h1>Welcome {{ name }}</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <table width="200" align="center">
+    <thead><h2>Python Interview Questions</h2></thead>
+    <tr>
+      <td> <h5>Python Interview Questions | Intellipaat </h5>
+        <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/XwcJ9_hijdk"
+                frameborder="0" allow="accelerometer;
+                 autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+    </td>
+       <td> <h5>Python Interview Questions And Answers| Edureka</h5>
+
+        <iframe width="560"
+                height="315"
+                src="https://www.youtube.com/embed/B_17_RORoiI"
+                frameborder="0"
+                allow="accelerometer; autoplay;
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+    </td>
+    </tr>
+        <hr>
+        <tr>
+        <th>
+            Python Interview Questions|Simplilearn
+        <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/ONzmH7mAgEA"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </th>
+        <th>
+            Python Interview Questions and Answers - For Freshers and Experienced Candidates
+        <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/WZHx1h6f2W0"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                gyroscope; picture-in-picture" allowfullscreen>
+
+        </iframe>
+    </th>
+        </tr>
+
+    </table>
+    <table width="200" align="center">
+    <thead><h2>Django Interview Questions</h2></thead>
+    <tr>
+      <td> <h5>Django Interview Questions | Intellipaat </h5>
+        <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/ERHTOvQCOBs"
+                frameborder="0" allow="accelerometer;
+                 autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+    </td>
+       <td> <h5>Django Interview Questions And Answers| Edureka</h5>
+
+        <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/C1OfG7IK5jo"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+    </td>
+    </tr>
+        <hr>
+        <tr>
+        <th>
+            Django Interview Questions|Edureka-2
+        <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/vP5GTeCp4Go"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </th>
+        <th>
+            Django Interview Questions and Answers - For Freshers and Experienced Candidates
+        <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/9ai0b1LRMQM"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                gyroscope; picture-in-picture" allowfullscreen>
+
+        </iframe>
+    </th>
+        </tr>
+
+    </table>
+    {% if data %}
+        <h3 style="text-align: center;background: #87ff65">{{ data }}</h3>
+    {% endif %}
+{% endblock %}

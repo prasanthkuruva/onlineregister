@@ -1,0 +1,22 @@
+{% extends 'menu.html'%}
+{% load static %}
+{% block menu %}
+    <form method="post" action="{% url 'shome' %}">
+    {% csrf_token %}
+
+    <table align="center" width="600" style="background: orchid">
+    <tr><th style="text-align: center" colspan="3"><h3>Student Login Page</h3></th></tr>
+    <tr><th rowspan="4"><img src="{% static 'images/s1.png' %}" width="600" height="300"></th></tr>
+    <tr><th><input type="text" name="t1" placeholder="Enter User Name" required></th></tr>
+    <tr><th><input type="password" name="t2" placeholder="Enter Password" required></th></tr>
+        <tr><th><button type="submit">Login</button> </th></tr>
+    <tr><th style="text-align: right">For<a href="{% url 'registration' %}">Registration</a></th></tr>
+    </table>
+    </form>
+    {% if data %}
+        <h3 style="text-align: center">{{ data }}</h3>
+    {% endif %}
+    {% for x in message %}
+        <h3 style="text-align: center">{{ x }}</h3>
+    {% endfor %}
+{% endblock %}

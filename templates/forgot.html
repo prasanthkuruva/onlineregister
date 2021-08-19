@@ -1,0 +1,21 @@
+{% extends 'menu.html'%}
+{% load static %}
+{% block menu %}
+    <form method="post" action="{% url 'recover' %}">
+    {% csrf_token %}
+
+    <table align="center" width="300" style="background: yellowgreen">
+    <tr><th style="text-align: center" colspan="3"><h3>Recover Your Password Here</h3></th></tr>
+    <tr><th rowspan="4"><img src="{% static 'images/Question-Mark.png' %}" width="600" height="300"></th></tr>
+    <tr><th><input type="text" name="t1" placeholder="Enter User Name" required></th></tr>
+    <tr><th><input type="email" name="t2" placeholder="Enter Email" required></th></tr>
+        <tr><th><button type="submit">Submit</button> </th></tr>
+    </table>
+    </form>
+    {% if data %}
+        <h3 style="text-align: center;background: green">password send to your mail whis is: "{{ data }}"</h3>
+    {% endif %}
+    {% for x in messages %}
+       <h3 style="text-align: center;background: red"> {{ x }}</h3>
+    {% endfor %}
+{% endblock %}
